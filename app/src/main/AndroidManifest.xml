@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.whatsappclone">
+    package="com.charlesadebolaministries.whatsappclone">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/kabod2_icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.StatusActivity"></activity>
-        <activity android:name=".activities.ConversationActivity" />
-        <activity android:name=".activities.ContactsActivity" />
+        <activity android:name="com.charlesadebolaministries.whatsappclone.activities.AboutActivity"></activity>
+        <activity android:name="com.charlesadebolaministries.whatsappclone.activities.VerifyMobileActivity" />
+        <activity android:name="com.charlesadebolaministries.whatsappclone.activities.PhoneLoginActivity" />
         <activity
-            android:name=".activities.ProfileActivity"
+            android:name="com.charlesadebolaministries.whatsappclone.activities.StatusActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.charlesadebolaministries.whatsappclone.activities.ConversationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.charlesadebolaministries.whatsappclone.activities.ContactsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.charlesadebolaministries.whatsappclone.activities.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.charlesadebolaministries.whatsappclone.activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.SignupActivity"
-            android:screenOrientation="portrait"
+            android:name="com.charlesadebolaministries.whatsappclone.activities.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".activities.LoginActivity"
-            android:screenOrientation="portrait"
+            android:name="com.charlesadebolaministries.whatsappclone.activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

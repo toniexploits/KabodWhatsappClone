@@ -18,7 +18,10 @@
             android:layout_width="@dimen/send_width"
             android:layout_height="@dimen/send_height"
             android:layout_margin="@dimen/grid_1"
+            android:fontFamily="@font/poppins_medium"
             android:text="@string/button_update_status"
+            android:textSize="14sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 
@@ -27,6 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/grid_1"
+            android:fontFamily="@font/poppins_medium"
             android:gravity="center_vertical"
             android:hint="@string/hint_status"
             android:maxHeight="@dimen/send_max_height"
@@ -40,7 +44,8 @@
             android:id="@+id/statusIV"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:scaleType="center"
+            android:contentDescription="@string/status_image"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/statusET"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:theme="@style/ThemeOverlay.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
@@ -20,8 +22,12 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="1"
             android:background="?attr/colorPrimary"
+            app:collapseIcon="@drawable/icons8_menu_24"
             app:layout_scrollFlags="enterAlways"
             app:popupTheme="@style/AppTheme"
+            app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:subtitleTextColor="@color/colorAccent"
+            app:title="Kabod"
             app:titleTextColor="@color/white">
 
         </androidx.appcompat.widget.Toolbar>
@@ -30,26 +36,29 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabGravity="fill"
             app:tabIndicatorColor="@color/white"
+            app:tabMaxWidth="400dp"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
             app:tabTextColor="@color/white">
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/statusUpdateTI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:icon="@drawable/camera"/>
+                android:icon="@drawable/camera" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/chatTI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/chats"/>
+                android:text="@string/chats" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/statusTI"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/status"/>
+                android:text="@string/status" />
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -71,9 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:onClick="onNewChat"
-        app:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="@color/purpleLight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/appbar"
         app:srcCompat="@android:drawable/stat_notify_chat" />

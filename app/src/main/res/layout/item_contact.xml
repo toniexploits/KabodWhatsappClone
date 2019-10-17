@@ -11,13 +11,15 @@
         android:id="@+id/contactNameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:textSize="@dimen/text_size"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/contactNumberTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size"/>
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/text_size" />
 
 </LinearLayout>

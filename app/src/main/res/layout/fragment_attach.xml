@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/attachFileLayout"
+    tools:context=".fragments.AttachFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/galleryIV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:background="@drawable/standard_button_rounded"-->
+<!--        android:src="@android:drawable/ic_menu_gallery"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/videoIV"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/videoIV"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/docIV"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/videoIV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:background="@drawable/standard_button_rounded"-->
+<!--        android:src="@android:drawable/ic_media_play"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/audioIV"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/audioIV"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/galleryIV" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/audioIV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:background="@drawable/standard_button_rounded"-->
+<!--        android:src="@android:drawable/ic_lock_silent_mode_off"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/docIV"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/docIV"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/videoIV" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/docIV"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:background="@drawable/standard_button_rounded"-->
+<!--        android:src="@android:drawable/ic_input_get"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/audioIV"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/galleryTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="@string/gallery"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/galleryIV" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/vdeoTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="@string/video"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/galleryTV"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/videoIV" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/audioTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="52dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="@string/audio"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/vdeoTV"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/audioIV" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/docTV"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:text="@string/document"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/audioTV"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/docIV" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/attachRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

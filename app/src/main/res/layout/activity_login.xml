@@ -1,126 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.LoginActivity">
 
+    <!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:fillViewport="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-   <androidx.core.widget.NestedScrollView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:fillViewport="true"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintEnd_toEndOf="parent">
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
 
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent">
-           <ImageView
-               android:id="@+id/imageView"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_centerHorizontal="true"
-               android:src="@drawable/kabod1_icon"
-               android:layout_marginLeft="@dimen/grid_3"
-               android:layout_marginStart="@dimen/grid_3"
-               android:layout_marginRight="@dimen/grid_3"
-               android:layout_marginEnd="@dimen/grid_3"
-               android:layout_marginTop="@dimen/grid_3"/>
+<!--            <TextView-->
+<!--                android:id="@+id/headerText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginLeft="@dimen/grid_4"-->
+<!--                android:layout_marginTop="@dimen/grid_3"-->
+<!--                android:layout_marginEnd="0dp"-->
+<!--                android:layout_marginRight="@dimen/grid_4"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:text="@string/kabod"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="36sp"-->
+<!--                android:textStyle="bold" />-->
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:id="@+id/emailTIL"
-               android:layout_width="@dimen/standard_width"
-               android:layout_height="wrap_content"
-               android:layout_below="@id/imageView"
-               android:layout_centerHorizontal="true"
-               android:layout_marginLeft="@dimen/grid_3"
-               android:layout_marginStart="@dimen/grid_3"
-               android:layout_marginRight="@dimen/grid_3"
-               android:layout_marginEnd="@dimen/grid_3"
-               android:layout_marginTop="@dimen/grid_3">
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/emailTIL"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/headerText"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginLeft="@dimen/grid_3"-->
+<!--                android:layout_marginTop="@dimen/grid_2"-->
+<!--                android:layout_marginRight="@dimen/grid_3">-->
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/emailET"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:inputType="textEmailAddress"
-                   android:hint="@string/hint_email"/>
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/emailET"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:hint="@string/hint_email"-->
+<!--                    android:inputType="textEmailAddress" />-->
 
-           </com.google.android.material.textfield.TextInputLayout>
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
 
-           <com.google.android.material.textfield.TextInputLayout
-               android:id="@+id/passwordTIL"
-               android:layout_width="@dimen/standard_width"
-               android:layout_height="wrap_content"
-               android:layout_below="@id/emailTIL"
-               android:layout_centerHorizontal="true"
-               android:layout_marginLeft="@dimen/grid_3"
-               android:layout_marginStart="@dimen/grid_3"
-               android:layout_marginRight="@dimen/grid_3"
-               android:layout_marginEnd="@dimen/grid_3"
-               android:layout_marginTop="@dimen/grid_3">
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/passwordTIL"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/emailTIL"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginLeft="@dimen/grid_3"-->
+<!--                android:layout_marginTop="@dimen/grid_2"-->
+<!--                android:layout_marginRight="@dimen/grid_3">-->
 
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/passwordET"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:inputType="textPassword"
-                   android:hint="@string/hint_password"/>
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/passwordET"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins"-->
+<!--                    android:hint="@string/hint_password"-->
+<!--                    android:inputType="textPassword" />-->
 
-           </com.google.android.material.textfield.TextInputLayout>
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
 
-           <Button
-               android:id="@+id/buttonLogin"
-               android:layout_width="@dimen/standard_width"
-               android:layout_height="@dimen/standard_height"
-               android:text="@string/button_login"
-               android:layout_below="@id/passwordTIL"
-               style="@style/StandardButton"
-               android:onClick="onLogin"
-               android:layout_centerHorizontal="true"
-               android:layout_marginLeft="@dimen/grid_3"
-               android:layout_marginStart="@dimen/grid_3"
-               android:layout_marginRight="@dimen/grid_3"
-               android:layout_marginEnd="@dimen/grid_3"
-               android:layout_marginTop="@dimen/grid_3"/>
 
-           <TextView
-               android:id="@+id/signupTV"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@id/buttonLogin"
-               android:layout_centerHorizontal="true"
-               android:layout_marginTop="@dimen/grid_3"
-               android:layout_marginBottom="@dimen/grid_3"
-               android:clickable="true"
-               style="@style/LinkText"
-               android:onClick="onSignup"
-               android:text="@string/text_signup"/>
+<!--            <Button-->
+<!--                android:id="@+id/buttonLogin"-->
+<!--                style="@style/StandardButton"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/passwordTIL"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginLeft="@dimen/grid_3"-->
+<!--                android:layout_marginTop="@dimen/grid_2"-->
+<!--                android:layout_marginRight="@dimen/grid_3"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:onClick="onLogin"-->
+<!--                android:text="@string/button_login" />-->
 
-       </RelativeLayout>
-   </androidx.core.widget.NestedScrollView>
+<!--            <TextView-->
+<!--                android:id="@+id/signupTV"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/buttonLogin"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginLeft="@dimen/grid_3"-->
+<!--                android:layout_marginTop="@dimen/grid_2"-->
+<!--                android:layout_marginRight="@dimen/grid_3"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:onClick="onSignup"-->
+<!--                android:text="@string/text_signup"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="18sp" />-->
 
-   <LinearLayout
-       android:id="@+id/progressLayout"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintLeft_toLeftOf="parent"
-       app:layout_constraintRight_toRightOf="parent"
-       android:orientation="vertical"
-       android:gravity="center"
-       android:background="@color/colorLightGrey"
-       android:visibility="gone">
+<!--            <TextView-->
+<!--                android:id="@+id/phoneloginTV"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/signupTV"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginLeft="@dimen/grid_3"-->
+<!--                android:layout_marginTop="@dimen/grid_2"-->
+<!--                android:layout_marginRight="@dimen/grid_3"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:fontFamily="@font/poppins"-->
+<!--                android:onClick="onPhoneAuth"-->
+<!--                android:text="@string/sign_in_with_phone_number"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="18sp" />-->
 
-       <ProgressBar
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"/>
+<!--        </RelativeLayout>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
 
-   </LinearLayout>
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="319dp"
+        android:layout_height="124dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/welcome_note"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorTransparentGrey"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="163dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/kabod"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kabod1_icon" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/standard_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/standard_button_rounded"
+        android:text="@string/signin_create_account"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:focusable="true"
+        android:clickable="true"
+        android:onClick="onPhoneAuth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

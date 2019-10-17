@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:scaleType="fitCenter"/>
+        android:contentDescription="@string/status_image"
+        android:scaleType="fitCenter" />
 
     <TextView
         android:id="@+id/statusTV"
@@ -22,7 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/grid_2"
+        android:layout_marginBottom="64dp"
+        android:fontFamily="@font/poppins_medium"
         android:gravity="center"
         android:textColor="@color/white" />
 

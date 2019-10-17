@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/conversationView"
     tools:context=".activities.ConversationActivity">
 
     <LinearLayout
@@ -28,10 +29,9 @@
                 android:id="@+id/topPhotoIV"
                 android:layout_width="@dimen/standard_height"
                 android:layout_height="@dimen/standard_height"
-                android:layout_marginRight="@dimen/grid_1"
-                android:clickable="true"
-                android:onClick="onBack"
-                android:scaleType="center" />
+                android:layout_marginEnd="@dimen/grid_1"
+                android:contentDescription="@string/user_profile_image"
+                android:scaleType="centerCrop" />
 
         </androidx.cardview.widget.CardView>
 
@@ -40,10 +40,27 @@
             style="@style/Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:gravity="center_vertical"
-            android:paddingLeft="@dimen/grid_1" />
+            android:paddingLeft="@dimen/grid_1"
+            android:paddingRight="@dimen/grid_1"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
 
     </LinearLayout>
+
+    <!--    <Button-->
+<!--        android:id="@+id/sendButton"-->
+<!--        style="@style/SendButton"-->
+<!--        android:layout_width="@dimen/send_width"-->
+<!--        android:layout_height="@dimen/send_height"-->
+<!--        android:layout_margin="@dimen/grid_1"-->
+<!--        android:fontFamily="@font/poppins_light"-->
+<!--        android:onClick="onSend"-->
+<!--        android:text="@string/send_button_text"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messagesRV"
@@ -52,25 +69,33 @@
         android:layout_marginTop="@dimen/grid_2"
         android:layout_marginBottom="@dimen/grid_2"
         app:layout_constraintBottom_toTopOf="@+id/messageET"
-        app:layout_constraintTop_toBottomOf="@+id/navigationLayout" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navigationLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <ImageView
         android:id="@+id/sendButton"
         style="@style/SendButton"
         android:layout_width="@dimen/send_width"
         android:layout_height="@dimen/send_height"
         android:layout_margin="@dimen/grid_1"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/send_chat"
         android:onClick="onSend"
-        android:text="@string/send_button_text"
+        android:src="@android:drawable/ic_menu_send"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messagesRV" />
 
-    <EditText
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
         android:id="@+id/messageET"
+        emojiconSize="14sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/grid_1"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppins_light"
         android:gravity="center_vertical"
         android:hint="@string/hint_message"
         android:maxHeight="@dimen/send_max_height"
@@ -78,7 +103,167 @@
         android:padding="@dimen/grid_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sendButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/smiley" />
+
+    <ImageView
+        android:id="@+id/smiley"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/smiley"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messagesRV"
+        app:srcCompat="@drawable/smiley" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/attachFile"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:contentDescription="@string/attach_file"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:onClick="onAttachFile"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/sendButton"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/messageET"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/messagesRV"-->
+<!--        app:srcCompat="@drawable/attachment_binder_clip_paper_icon_127114" />-->
+
+<!--    <TableRow-->
+<!--        android:id="@+id/attachOptionsLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/messageET"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/galleryIV"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/standard_button_rounded"-->
+<!--            android:src="@android:drawable/ic_menu_gallery" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/videoIV"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/standard_button_rounded"-->
+<!--            android:src="@android:drawable/ic_media_play" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/audioIV"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/standard_button_rounded"-->
+<!--            android:src="@android:drawable/ic_lock_silent_mode_off" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/docIV"-->
+<!--            android:layout_width="75dp"-->
+<!--            android:layout_height="75dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/standard_button_rounded"-->
+<!--            android:src="@android:drawable/ic_input_get" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/galleryTV"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="24dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginBottom="16dp"-->
+        <!--            android:text="@string/gallery"-->
+        <!--            android:textColor="@color/colorPrimary"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/galleryIV" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/vdeoTV"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="40dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginBottom="16dp"-->
+        <!--            android:text="@string/video"-->
+        <!--            android:textColor="@color/colorPrimary"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/galleryTV"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/videoIV" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/audioTV"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="52dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginBottom="16dp"-->
+        <!--            android:text="@string/audio"-->
+        <!--            android:textColor="@color/colorPrimary"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/vdeoTV"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/audioIV" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/docTV"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="24dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginBottom="16dp"-->
+        <!--            android:text="@string/document"-->
+        <!--            android:textColor="@color/colorPrimary"-->
+        <!--            android:textSize="18sp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/audioTV"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/docIV" />-->
+
+<!--    </TableRow>-->
+
+
+    <!--    <fragment-->
+<!--        android:id="@+id/attachFilefragment"-->
+<!--        android:name="com.example.whatsappclone.fragments.AttachFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/messageET"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

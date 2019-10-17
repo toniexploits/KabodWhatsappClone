@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.ProfileActivity">
 
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,8 +26,9 @@
             <ImageView
                 android:id="@+id/photoIV"
                 android:layout_width="@dimen/standard_width"
-                android:layout_height="@dimen/standard_width"
+                android:layout_height="@dimen/standard_height_small"
                 android:layout_marginBottom="@dimen/grid_3"
+                android:scaleType="centerCrop"
                 android:src="@drawable/profile_icon" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +42,9 @@
                     android:id="@+id/nameET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_name" />
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/hint_name"
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,34 +59,96 @@
                     android:id="@+id/emailET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_email" />
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/hint_email"
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneTIL"
+                android:id="@+id/occupationTIL"
                 android:layout_width="@dimen/standard_width"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/emailTIL"
                 android:paddingBottom="@dimen/grid_2">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phoneET"
+                    android:id="@+id/occupationeET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_phone" />
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/occupation"
+                    android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/maritalStatusTIL"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/occupationTIL"
+                android:paddingBottom="@dimen/grid_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/maritalStatusET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Marital Status"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textDOB"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maritalStatusTIL"
+                android:paddingBottom="@dimen/grid_2"
+                android:text="@string/date_of_birth"
+                android:textSize="16sp" />
+
+            <DatePicker
+                android:id="@+id/birthDatePicker"
+                style="@android:style/Widget.Holo.DatePicker"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textDOB"
+                android:calendarViewShown="false"
+                android:headerBackground="@color/colorPrimary"
+                android:paddingBottom="@dimen/grid_2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cityStateTIL"
+                android:layout_width="@dimen/standard_width"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/birthDatePicker"
+                android:paddingBottom="@dimen/grid_2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cityStateET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/city_state"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <Button
                 android:id="@+id/updateButton"
                 style="@style/StandardButton"
                 android:layout_width="@dimen/standard_width"
                 android:layout_height="@dimen/standard_height"
-                android:layout_below="@id/phoneTIL"
+                android:layout_below="@id/cityStateTIL"
+                android:layout_marginTop="13dp"
                 android:layout_marginBottom="@dimen/grid_3"
+                android:fontFamily="@font/poppins_medium"
                 android:onClick="onUpdate"
-                android:text="@string/button_update" />
+                android:text="@string/button_update"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/deleteAccountButton"
@@ -90,8 +156,10 @@
                 android:layout_width="@dimen/standard_width"
                 android:layout_height="@dimen/standard_height"
                 android:layout_below="@id/updateButton"
+                android:fontFamily="@font/poppins_medium"
                 android:onClick="onDelete"
-                android:text="@string/button_delete" />
+                android:text="@string/button_delete"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 

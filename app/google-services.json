@@ -8,6 +8,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:249755160103:android:2cae49be410d2885760802",
+        "android_client_info": {
+          "package_name": "com.charlesadebolaministries.whatsappclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249755160103-aapvqcj7rfqrtf6m0qae4ccui601ejqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.charlesadebolaministries.whatsappclone",
+            "certificate_hash": "1c8ce672005bc14ad1174a7b450babde59818cd5"
+          }
+        },
+        {
+          "client_id": "249755160103-dbhen1l9p9oaad19ek8g9re5cth5g6jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1CSpmkwmnC8jaGONTZUZppO74rQ2UHG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249755160103-dbhen1l9p9oaad19ek8g9re5cth5g6jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:249755160103:android:4a6430f077d52878760802",
         "android_client_info": {
           "package_name": "com.example.whatsappclone"

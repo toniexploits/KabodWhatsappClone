@@ -5,19 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="@dimen/grid_1"
-    android:gravity="left"
-    app:layout_gravity="left">
+    android:gravity="start"
+    app:layout_gravity="start">
 
     <TextView
         android:id="@+id/messageTV"
         style="@style/ChatBubble"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/chat_standard_size"
         android:background="@drawable/chat_other_message_bg_rounded"
-        android:gravity="left|center_vertical"
+        android:fontFamily="@font/poppins"
+        android:gravity="start|center_vertical"
         android:padding="@dimen/grid_1"
-        android:layout_marginRight="@dimen/chat_standard_size"
-        android:textColor="@color/black"
-        android:text="@string/test"/>
+        android:text="@string/test"
+        android:textColor="@color/white" />
 
 </LinearLayout>

@@ -6,7 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
 
+    <style name="ToolBarStyle" parent="Theme.AppCompat">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -14,41 +20,8 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-    <style name="StandardButton">
-        <item name="android:background">@drawable/standard_button_rounded</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/standard_text_size</item>
-        <item name="android:foreground">?attr/selectableItemBackground</item>
-    </style>
-
-    <style name="SendButton">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/standard_text_size</item>
-        <item name="android:background">@drawable/send_button_rounded</item>
-    </style>
-
-    <style name="Title">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/colorPrimary</item>
-    </style>
-
-    <style name="Text">
-        <item name="android:textSize">18sp</item>
-    </style>
-
-    <style name="LinkText" parent="Text">
-        <item name="android:textColor">@color/colorAccent</item>
-    </style>
-
-    <style name="ChatBubble">
-        <item name="android:textSize">@dimen/chat_text_size</item>
-        <item name="android:minHeight">@dimen/chat_standard_size</item>
-        <item name="android:maxHeight">@dimen/chat_max_size</item>
-    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

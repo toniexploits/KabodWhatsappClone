@@ -12,40 +12,43 @@
         android:id="@+id/itemCV"
         android:layout_width="@dimen/chat_image_size"
         android:layout_height="@dimen/chat_image_size"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
         android:padding="@dimen/grid_2"
-        android:layout_alignParentLeft="true"
-        app:cardCornerRadius="@dimen/chat_image_radius"
-        android:layout_centerHorizontal="true">
+        app:cardCornerRadius="@dimen/chat_image_radius">
 
 
         <ImageView
-            android:id="@+id/itemIV"
-            android:layout_width="wrap_content"
+            android:id="@+id/thisUserStatusIV"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="center" />
+            android:contentDescription="@string/user_profile_image"
+            android:scaleType="centerCrop" />
 
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/grid_2"
-        android:layout_toRightOf="@id/itemCV"
+        android:paddingStart="@dimen/grid_2"
+        android:paddingEnd="@dimen/grid_2"
+        android:layout_toEndOf="@id/itemCV"
         android:orientation="vertical"
         android:gravity="center_vertical">
 
         <TextView
-            android:id="@+id/itemNameTV"
+            android:id="@+id/thisUserNameTV"
             style="@style/Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"/>
 
         <TextView
-            android:id="@+id/itemTimeTV"
+            android:id="@+id/thisUserTimeTV"
+            style="@style/Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Text"/>
+            android:fontFamily="@font/poppins" />
 
     </LinearLayout>
 
